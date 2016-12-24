@@ -13,6 +13,10 @@ defmodule KV.Registry do
     GenServer.cast(server, {:create, name})
   end
 
+  def stop(server, name) do
+    GenServer.stop(server)
+  end
+
   # server
 
   def init(:ok) do
